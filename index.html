@@ -3,16 +3,32 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
+	<script src="https://kit.fontawesome.com/e43a2ec68e.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container">
+        <h1>Zagrajmy w papier, kamień, nożyce!</h1>
 		<div id="buttons">
-            <button id="button-rock">Kamień</button>
-            <button id="button-paper">Papier</button>
-            <button id="button-scissors">Nożyce</button>
+            <button class="game-btn" id="button-rock" type="button">Kamień</button>
+            <button class="game-btn" id="button-paper" type="button">Papier</button>
+            <button class="game-btn" id="button-scissors" type="button">Nożyce</button>
         </div>
 		<div id="messages"></div>
+        <div class="rounds">
+            <p>Runda: <span id="display">0</span></p>
+        </div>
+		<div class="results">
+			<div><p>Twój wynik to: </p><span id="player-score">0</span> </div>
+			<div><p>Wynik komputera to: </p><span id="computer-score">0</span></div>
+		</div>
+		<div class="graphic-result">
+			<div id="trophy">
+				<i class="fa-solid fa-trophy"></i>
+			</div>
+			<div class="player-trophy"><i class="fa-solid fa-trophy"></i></div>
+			<div class="computer-trophy"><i class="fa-solid fa-trophy"></i></div>
+		</div>
 	</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>

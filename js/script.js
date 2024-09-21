@@ -4,6 +4,15 @@ buttonRock = document.getElementById('button-rock');
 buttonPaper = document.getElementById('button-paper');
 buttonScissors = document.getElementById('button-scissors');
 
+let playerScoreCount = 0;
+let = playerScore = document.getElementById('player-score');
+let computerScoreCount = 0;
+let computerScore = document.getElementById('computer-score');
+
+let trophyLeftValue = 50;
+const trophyLeftChange = 8;
+const trophy = document.getElementById('trophy');
+
 /**
  * Describe this function...
  */
@@ -37,14 +46,38 @@ function buttonClicked(argButtonName) {
     console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
     if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
       printMessage('Wygrywasz!');
-    } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
+      playerScoreCount++;
+      playerScore.innerHTML = playerScoreCount;
+      console.log('Aktualny wynik gracza to ' + playerScoreCount);
+      trophyLeftValue = trophyLeftValue - trophyLeftChange;
+      trophy.style.left = trophyLeftValue + "%";
+      console.log("Aktualny stan left dla trophy to " + trophyLeftValue);
+     } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
       printMessage('Wygrywasz!');
+      playerScoreCount++;
+      playerScore.innerHTML = playerScoreCount;
+      console.log('Aktualny wynik gracza to ' + playerScoreCount);
+      trophyLeftValue = trophyLeftValue - trophyLeftChange;
+      trophy.style.left = trophyLeftValue + "%";
+      console.log("Aktualny stan left dla trophy to " + trophyLeftValue);
     } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
       printMessage('Wygrywasz!');
+      playerScoreCount++;
+      playerScore.innerHTML = playerScoreCount;
+      console.log('Aktualny wynik gracza to ' + playerScoreCount);
+      trophyLeftValue = trophyLeftValue - trophyLeftChange;
+      trophy.style.left = trophyLeftValue + "%";
+      console.log("Aktualny stan left dla trophy to " + trophyLeftValue);
     } else if (argPlayerMove == argComputerMove) {
       printMessage('Remis!');
     } else {
       printMessage('Przegrywasz :(');
+      computerScoreCount++;
+      computerScore.innerHTML = computerScoreCount;
+      console.log('Aktualny wynik komputera to ' + computerScoreCount);
+      trophyLeftValue = trophyLeftValue + trophyLeftChange;
+      trophy.style.left = trophyLeftValue + "%";
+      console.log("Aktualny stan left dla trophy to " + trophyLeftValue);
     }
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
   }
@@ -62,5 +95,24 @@ function buttonClicked(argButtonName) {
 buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
 buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
 buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
+
+//Click Counter script start here
+let count = 0;
+let disp = document.getElementById('display');
+
+buttonRock.addEventListener('click', function () {
+    count++;
+    disp.innerHTML = count;
+});
+
+buttonPaper.addEventListener('click', function () {
+  count++;
+  disp.innerHTML = count;
+});
+
+buttonScissors.addEventListener('click', function () {
+  count++;
+  disp.innerHTML = count;
+});
 
 
