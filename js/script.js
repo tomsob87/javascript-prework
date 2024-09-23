@@ -19,7 +19,8 @@ const trophy = document.getElementById('trophy');
 function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
-  trophy.style.transition = "left 2s linear";
+  trophy.style.transition = "left .5s linear";
+  buttonsBoard.style.transition = "1s";
   console.log("Dodałem transition do trophy - jak zrobić to inaczej, żeby działało?")
 
   var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
@@ -117,4 +118,55 @@ buttonScissors.addEventListener('click', function () {
   disp.innerHTML = count;
 });
 
+// End Game Function
+
+const pointsToWin = 3;
+let playerWon = trophyLeftValue - trophyLeftChange * pointsToWin;
+let computerWon = trophyLeftValue + trophyLeftChange * pointsToWin;
+const buttonsBoard = document.getElementById('buttons');
+
+buttonRock.addEventListener('click', function(){
+  if (trophyLeftValue === playerWon){
+    console.log("Wygrał Player");
+    buttonsBoard.style.top = "150%";
+  }
+  else if(trophyLeftValue === computerWon) {
+    console.log("Wygrał Computer");
+    buttonsBoard.style.top = "150%";
+  }
+  else {
+      console.log("Gramy dalej!");
+    }
+  }
+)
+
+buttonPaper.addEventListener('click', function(){
+  if (trophyLeftValue === playerWon){
+    console.log("Wygrał Player");
+    buttonsBoard.style.top = "150%";
+  }
+  else if(trophyLeftValue === computerWon) {
+    console.log("Wygrał Computer");
+    buttonsBoard.style.top = "150%";
+  }
+  else {
+      console.log("Gramy dalej!");
+    }
+  }
+)
+
+buttonScissors.addEventListener('click', function(){
+  if (trophyLeftValue === playerWon){
+    console.log("Wygrał Player");
+    buttonsBoard.style.top = "150%";
+  }
+  else if(trophyLeftValue === computerWon) {
+    console.log("Wygrał Computer");
+    buttonsBoard.style.top = "150%";
+  }
+  else {
+      console.log("Gramy dalej!");
+    }
+  }
+)
 
