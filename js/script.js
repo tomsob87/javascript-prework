@@ -19,6 +19,8 @@ const trophy = document.getElementById('trophy');
 function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
+  trophy.style.transition = "left 2s linear";
+  console.log("Dodałem transition do trophy - jak zrobić to inaczej, żeby działało?")
 
   var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
 
