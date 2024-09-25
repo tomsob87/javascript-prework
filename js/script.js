@@ -6,6 +6,11 @@ let trophyLeftValue = 50;
 const trophyLeftChange = 8;
 const trophy = document.getElementById('trophy');
 
+let playerScoreCount = 0;
+const playerScore = document.getElementById('player-score');
+let computerScoreCount = 0;
+const computerScore = document.getElementById('computer-score');
+
 /**
  * Describe this function...
  */
@@ -40,11 +45,6 @@ function buttonClicked(argButtonName) {
    * Wyświetlenie wyniku
    */
   function displayResult(argPlayerMove, argComputerMove) {
-
-    let playerScoreCount = 0;
-    const playerScore = document.getElementById('player-score');
-    let computerScoreCount = 0;
-    const computerScore = document.getElementById('computer-score');
 
     console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
 
