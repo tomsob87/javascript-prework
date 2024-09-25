@@ -1,8 +1,6 @@
-const buttonRock = document.getElementById('button-rock');
-const buttonPaper = document.getElementById('button-paper');
-const buttonScissors = document.getElementById('button-scissors');
-
-
+const buttonRock = document.getElementById('button-rock'),
+buttonPaper = document.getElementById('button-paper'),
+buttonScissors = document.getElementById('button-scissors');
 
 let trophyLeftValue = 50;
 const trophyLeftChange = 8;
@@ -14,11 +12,12 @@ const trophy = document.getElementById('trophy');
 function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
+
   trophy.style.transition = "left .5s linear";
   buttonsBoard.style.transition = "1s";
   console.log("Dodałem transition do trophy i buttonBoard - jak zrobić to inaczej, żeby działało?");
 
-  var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
+  let computerMove, playerMove, randomNumber;
 
   /**
    * Przypisanie ID move do jego nazwy
@@ -48,6 +47,7 @@ function buttonClicked(argButtonName) {
     const computerScore = document.getElementById('computer-score');
 
     console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
+
     if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
       printMessage('Wygrywasz!');
       playerScoreCount++;
@@ -119,7 +119,7 @@ buttonScissors.addEventListener('click', function () {
   disp.innerHTML = count;
 });
 
-// End Game Function
+// End Game script
 
 const pointsToWin = 3;
 let playerWon = trophyLeftValue - trophyLeftChange * pointsToWin;
