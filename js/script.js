@@ -1,8 +1,6 @@
-var argButtonName, buttonPaper, buttonRock, buttonScissors, buttonTest;
-
-buttonRock = document.getElementById('button-rock');
-buttonPaper = document.getElementById('button-paper');
-buttonScissors = document.getElementById('button-scissors');
+const buttonRock = document.getElementById('button-rock');
+const buttonPaper = document.getElementById('button-paper');
+const buttonScissors = document.getElementById('button-scissors');
 
 let playerScoreCount = 0;
 let = playerScore = document.getElementById('player-score');
@@ -21,7 +19,7 @@ function buttonClicked(argButtonName) {
   console.log(argButtonName + ' został kliknięty');
   trophy.style.transition = "left .5s linear";
   buttonsBoard.style.transition = "1s";
-  console.log("Dodałem transition do trophy - jak zrobić to inaczej, żeby działało?")
+  console.log("Dodałem transition do trophy i buttonBoard - jak zrobić to inaczej, żeby działało?");
 
   var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
 
