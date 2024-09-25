@@ -124,15 +124,19 @@ const pointsToWin = 3;
 let playerWon = trophyLeftValue - trophyLeftChange * pointsToWin;
 let computerWon = trophyLeftValue + trophyLeftChange * pointsToWin;
 const buttonsBoard = document.getElementById('buttons');
+const winBoard = document.getElementById('end-game');
+const lostBoard = document.getElementById('end-game-computer');
 
 buttonRock.addEventListener('click', function(){
   if (trophyLeftValue === playerWon){
     console.log("Wygrał Player");
     buttonsBoard.style.top = "150%";
+    winBoard.style.top = "50%";
   }
   else if(trophyLeftValue === computerWon) {
     console.log("Wygrał Computer");
     buttonsBoard.style.top = "150%";
+    lostBoard.style.top = "50%";
   }
   else {
       console.log("Gramy dalej!");
@@ -144,10 +148,12 @@ buttonPaper.addEventListener('click', function(){
   if (trophyLeftValue === playerWon){
     console.log("Wygrał Player");
     buttonsBoard.style.top = "150%";
+    winBoard.style.top = "50%";
   }
   else if(trophyLeftValue === computerWon) {
     console.log("Wygrał Computer");
     buttonsBoard.style.top = "150%";
+    lostBoard.style.top = "50%";
   }
   else {
       console.log("Gramy dalej!");
@@ -159,10 +165,12 @@ buttonScissors.addEventListener('click', function(){
   if (trophyLeftValue === playerWon){
     console.log("Wygrał Player");
     buttonsBoard.style.top = "150%";
+    winBoard.style.top = "50%";
   }
   else if(trophyLeftValue === computerWon) {
     console.log("Wygrał Computer");
     buttonsBoard.style.top = "150%";
+    lostBoard.style.top = "50%";
   }
   else {
       console.log("Gramy dalej!");
