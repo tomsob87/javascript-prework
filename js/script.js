@@ -2,10 +2,7 @@ const buttonRock = document.getElementById('button-rock');
 const buttonPaper = document.getElementById('button-paper');
 const buttonScissors = document.getElementById('button-scissors');
 
-let playerScoreCount = 0;
-let = playerScore = document.getElementById('player-score');
-let computerScoreCount = 0;
-let computerScore = document.getElementById('computer-score');
+
 
 let trophyLeftValue = 50;
 const trophyLeftChange = 8;
@@ -44,6 +41,12 @@ function buttonClicked(argButtonName) {
    * Wyświetlenie wyniku
    */
   function displayResult(argPlayerMove, argComputerMove) {
+
+    let playerScoreCount = 0;
+    const playerScore = document.getElementById('player-score');
+    let computerScoreCount = 0;
+    const computerScore = document.getElementById('computer-score');
+
     console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
     if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
       printMessage('Wygrywasz!');
